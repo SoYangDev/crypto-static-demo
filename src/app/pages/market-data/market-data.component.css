@@ -1,0 +1,24 @@
+.market-data__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.market-data__header-left {
+    display: flex;
+    align-items: center;
+}
+
+.market-data__header-logo {
+    width: 25px;
+    margin-right: 20px;
+}
+
+.market-data__chart {
+    margin-top: 50px;
+}
+
+.market-data__description {
+    display: flex;
+    gap: 10px;
+}

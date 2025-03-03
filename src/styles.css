@@ -1,1 +1,39 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    background-color: #1a1a2e;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+button.primary {
+    color: var(--white);
+    background-image: var(--gradient);
+    border-radius: 999px;
+}
+
+button.secondary {
+    background: var(--white);
+    border-radius: 999px;
+}
+
+p.primary {
+    color: var(--white);
+    font-size: 16px;
+}
+
+:root {
+    --white: #f5f7fa;
+    --gradient: linear-gradient(to bottom right, #008cff, #e100ff);
+    --gray: lightgray;
+    --disabled: var(--gray);
+}
+
+.tooltip {
+    position: absolute;
+    background: #333;
+    color: var(--white);
+    padding: 5px;
+    border-radius: 4px;
+    pointer-events: none;
+    width: 200px;
+}

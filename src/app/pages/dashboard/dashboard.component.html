@@ -1,0 +1,29 @@
+@if (!!userSvc.name) {
+    <section-header>{{ userSvc.name() }}'s Portfolio</section-header>
+    <card-grid>
+        @defer (when coins$ | async) {
+            @if (coins$ | async; as coins) {
+                @for (coin of coins; track coin) {
+                    <ticker-card
+                        [ticker]="coin"
+                        (onClick)="goToMarketDataPage($event)"
+                    />
+                }
+            }
+        } @placeholder {
+            @for (i of getRange(6); track i) {
+                <ticker-card />
+            }
+        }
+    </card-grid>
+    <section class="dashboard__central">
+        <div>
+            <section-header>Transaction History</section-header>
+            <transaction-list [transactions]="transactions" />
+        </div>
+        <div>
+            <section-header>Notification Hub</section-header>
+            <notification-hub />
+        </div>
+    </section>
+}

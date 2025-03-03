@@ -1,0 +1,27 @@
+mat-dialog-content {
+    display: flex;
+    align-items: center;
+}
+
+.full-width {
+    width: 100%;
+}
+
+mat-form-field {
+    margin-bottom: 20px;
+}
+
+button {
+    color: var(--white);
+    background-image: var(--gradient);
+    border-radius: 999px;
+}
+
+input {
+    padding: 8px;
+}
+
+button:disabled {
+    background-color: gainsboro;
+    background-image: none;
+}
